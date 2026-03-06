@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Court | Fuudiz</title>
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet (Global styles) -->
+    <link rel="stylesheet" href="css/index.css?v=2">
+    <!-- Details Layout Stylesheet -->
+    <link rel="stylesheet" href="css/details.css?v=2">
+    <link rel="icon" type="image/x-icon" href="/fuudiz/images/f-u-u-d-i-z-high-resolution-logo.png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Fuudiz</a>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search Food Court...">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper to be populated by details.js -->
+    <div id="details-content-wrapper">
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-image-container">
+                    <img id="hero-image" src="" alt="Food Court Image" class="hero-image">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-text">
+                    <div class="badge" id="shop-category">Category</div>
+                    <h1 class="shop-name" id="shop-name">Food Court Name</h1>
+                    <p class="address-short" id="shop-address-short"><i class="fa-solid fa-location-dot"></i> Address
+                        Loading...</p>
+                    <div class="status-badge open" id="shop-timing-short">
+                        <i class="fa-regular fa-clock"></i> Timings Loading...
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+
+                <!-- Left Column: Menu & About -->
+                <div class="left-column">
+                    <!-- Menu -->
+                    <section class="card menu-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-utensils"></i> Our Menu</h2>
+                        </div>
+                        <ul class="menu-list" id="menu-list">
+                            <!-- Menu items injected here -->
+                        </ul>
+                    </section>
+
+                    <!-- About -->
+                    <section class="card about-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-circle-info"></i> About Us</h2>
+                        </div>
+                        <p id="about-text">About info loading...</p>
+                    </section>
+                </div>
+
+                <!-- Right Column: Info, Timings, Map -->
+                <div class="right-column">
+
+                    <!-- Timing -->
+                    <section class="card timing-section">
+                        <div class="section-header">
+                            <h2><i class="fa-regular fa-calendar-days"></i> Opening Hours</h2>
+                        </div>
+                        <ul class="time-table" id="timing-list">
+                            <!-- Timing items injected here -->
+                        </ul>
+                    </section>
+
+                    <!-- Contact & Location -->
+                    <section class="card contact-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-map-location-dot"></i> Location & Contact</h2>
+                        </div>
+                        <div class="contact-info">
+                            <div class="info-block">
+                                <i class="fa-solid fa-location-arrow icon"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p id="full-address">Address loading...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-container">
+                            <iframe id="map-iframe" src="" width="100%" height="250" style="border:0;"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="footer-logo">Fuudiz</h2>
+                <p>Discover the best food corners around you.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#food-courts">Food Courts</a></li>
+                        <li><a href="mailto:fuudiz.official@gmail.com">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="mailto:fuudiz.official@gmail.com"><i class="fa-solid fa-envelope"></i>
+                                fuudiz.official@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/fuudiz.official" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fuudiz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/details.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fuudiz | Discover Best Food Courts</title>
+
+	<!-- Modern Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+		rel="stylesheet">
+
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" type="image/x-icon" href="/fuudiz/images/f-u-u-d-i-z-high-resolution-logo.png">
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="index.html" class="logo">Fuudiz</a>
+
+			<div class="nav-right">
+				<div class="search-bar">
+					<i class="fa-solid fa-magnifying-glass search-icon"></i>
+					<input type="text" id="searchInput" placeholder="Search Food Courts...">
+					<i class="fa-solid fa-microphone mic-icon"></i>
+				</div>
+
+				<button id="loginBtn" class="btn-login" onclick="login()"><i class="fa-regular fa-user"></i>
+					Login</button>
+				<button id="logoutBtn" class="btn-outline" onclick="logout()" style="display:none;">Logout</button>
+				<div id="profileIcon" class="profile-avatar" style="display:none;" title="Profile"
+					onclick="toggleDropdown(event)">
+					<i class="fa-solid fa-user-astronaut"></i>
+				</div>
+				<!-- Profile Dropdown Menu -->
+				<div id="profileDropdown" class="profile-dropdown">
+					<div class="dropdown-header">
+						<span class="user-name">Welcome User</span>
+						<span class="user-email">user@fuudiz.com</span>
+					</div>
+					<ul class="dropdown-menu">
+						<li><a href="#"><i class="fa-regular fa-id-badge"></i> My Profile</a></li>
+						<li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Order History</a></li>
+						<li><a href="#"><i class="fa-regular fa-heart"></i> Favorites</a></li>
+						<hr>
+						<li><a href="#" onclick="logout(); return false;" class="logout-link"><i
+									class="fa-solid fa-power-off"></i> Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="hero-section" style="background-image: url('images/slide_1.jpg');">
+		<div class="hero-overlay"></div>
+		<div class="hero-content">
+			<h1 class="hero-title">Fuudiz</h1>
+			<p class="hero-subtitle">Discover the best food corners around you.</p>
+		</div>
+	</section>
+
+	<main class="main-content">
+		<!-- About Us snippet -->
+		<section class="intro-section">
+			<div class="intro-grid">
+				<div class="intro-image" style="background-image: url('images/res_img_1.jpg');"></div>
+				<div class="intro-text">
+					<h2><span class="highlight">A</span>bout Us</h2>
+					<p>Here you will get to know the best food courts for your favorite food whenever you want to eat.
+						We curate the local favorites so you can spend less time searching and more time enjoying.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quotes Section -->
+		<section class="quotes-section">
+			<div class="quote-card">
+				<i class="fa-solid fa-quote-left quote-icon"></i>
+				<blockquote>"Find something you’re passionate about and keep tremendously interested in it."
+				</blockquote>
+				<p class="quote-author">— Julia Child</p>
+			</div>
+		</section>
+
+		<!-- Food Courts Section -->
+		<section id="food-courts" class="food-courts-section">
+			<div class="section-header center">
+				<h2>Our Featured Food Courts</h2>
+				<p>Some food-courts you absolutely must visit</p>
+			</div>
+
+			<div class="cards-grid" id="cardsGrid">
+				<!-- Cards will be populated dynamically by JavaScript -->
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta-section">
+			<div class="cta-content">
+				<h2>Know a great spot?</h2>
+				<p>Help us add new food courts to our directory! Send us photos, menus, and details.</p>
+				<a class="btn-primary large" href="mailto:fuudiz.official@gmail.com"><i
+						class="fa-solid fa-paper-plane"></i> Contact Us</a>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="modern-footer">
+		<div class="footer-content">
+			<div class="footer-brand">
+				<h2 class="footer-logo">Fuudiz</h2>
+				<p>Discover the best food corners around you.</p>
+			</div>
+
+			<div class="footer-links-group">
+				<div class="footer-col">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#food-courts">Food Courts</a></li>
+						<li><a href="mailto:fuudiz.official@gmail.com">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Contact Us</h4>
+					<ul>
+						<li><a href="mailto:fuudiz.official@gmail.com"><i class="fa-solid fa-envelope"></i>
+								fuudiz.official@gmail.com</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Follow Us</h4>
+					<div class="social-links">
+						<a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://instagram.com/fuudiz.official?igshid=NGVhN2U2NjQ0Yg=="
+							aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 Fuudiz. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="js/data.js"></script>
+	<script>
+		// ==========================
+		// Dynamic Search & rendering
+		// ==========================
+		const cardsGrid = document.getElementById('cardsGrid');
+		const searchInput = document.getElementById('searchInput');
+
+		// Render cards based on provided data object
+		function renderCards(dataObj) {
+			cardsGrid.innerHTML = ''; // Clear current
+			const keys = Object.keys(dataObj);
+
+			if (keys.length === 0) {
+				cardsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted); font-size: 1.2rem;">No food courts found matching your search.</div>';
+				return;
+			}
+
+			keys.forEach(key => {
+				const shop = dataObj[key];
+				const article = document.createElement('article');
+				article.className = 'food-card';
+				article.innerHTML = `
+					<div class="card-image-wrap">
+						<img src="${shop.image}" alt="${shop.name}" class="card-image">
+						<div class="badge time-badge"><i class="fa-regular fa-clock"></i> ${shop.timings}</div>
+					</div>
+					<div class="card-content">
+						<h3>${shop.name}</h3>
+						<p class="price-tier">${shop.price_tier || ''}</p>
+						<p class="card-desc">${shop.address}</p>
+						<a href="details.html?id=${key}" class="btn-secondary">View Details <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				`;
+				cardsGrid.appendChild(article);
+			});
+		}
+
+		// Initial render
+		renderCards(foodCourtsData);
+
+		// Search event listener
+		searchInput.addEventListener('input', function (e) {
+			const query = e.target.value.toLowerCase();
+			const filteredData = {};
+
+			for (const key in foodCourtsData) {
+				const shop = foodCourtsData[key];
+				if (shop.name.toLowerCase().includes(query) ||
+					shop.address.toLowerCase().includes(query) ||
+					shop.category.toLowerCase().includes(query)) {
+					filteredData[key] = shop;
+				}
+			}
+			renderCards(filteredData);
+		});
+
+
+		// ==========================
+		// Auth & Profile Logic
+		// ==========================
+		async function login() {
+			const clientId = "5d963ccc-2139-41c8-a16d-0156ce3ac2b7";
+			const tenantId = "d7792664-161b-4b50-b85d-1200ff024bcb";
+			const region = "au-syd";
+			const redirectUri = "http://127.0.0.1:5501/"; // Must match original logic
+
+			const codeVerifier = [...crypto.getRandomValues(new Uint8Array(32))]
+				.map(b => b.toString(16).padStart(2, "0")).join("");
+
+			localStorage.setItem("pkce_verifier", codeVerifier);
+
+			const encoder = new TextEncoder();
+			const data = encoder.encode(codeVerifier);
+			const digest = await crypto.subtle.digest("SHA-256", data);
+
+			const codeChallenge = btoa(String.fromCharCode(...new Uint8Array(digest)))
+				.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+
+			const authUrl = `https://${region}.appid.cloud.ibm.com/oauth/v4/${tenantId}/authorization` +
+				`?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}` +
+				`&scope=openid&code_challenge=${codeChallenge}&code_challenge_method=S256&state=abc123`;
+
+			window.location.href = authUrl;
+		}
+
+		window.onload = function () {
+			const urlParams = new URLSearchParams(window.location.search);
+			const authCode = urlParams.get("code");
+
+			if (authCode) {
+				localStorage.setItem("loggedIn", "true");
+				window.history.replaceState({}, document.title, window.location.pathname);
+			}
+			updateUI();
+		};
+
+		function updateUI() {
+			const isLoggedIn = localStorage.getItem("loggedIn");
+			if (isLoggedIn === "true") {
+				document.getElementById("loginBtn").style.display = "none";
+				document.getElementById("profileIcon").style.display = "flex";
+			} else {
+				document.getElementById("loginBtn").style.display = "inline-flex";
+				document.getElementById("profileIcon").style.display = "none";
+				document.getElementById("profileDropdown").classList.remove("active");
+			}
+		}
+
+		function logout() {
+			localStorage.removeItem("loggedIn");
+			updateUI();
+		}
+
+		// Dropdown logic
+		function toggleDropdown(event) {
+			event.stopPropagation();
+			document.getElementById("profileDropdown").classList.toggle("active");
+		}
+
+		// Close dropdown if clicking elsewhere
+		window.onclick = function (event) {
+			if (!event.target.closest('.profile-avatar') && !event.target.closest('.profile-dropdown')) {
+				const dropdown = document.getElementById("profileDropdown");
+				if (dropdown.classList.contains('active')) {
+					dropdown.classList.remove('active');
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>

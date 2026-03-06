@@ -1,0 +1,288 @@
+/* =========================================================================
+   Fuudiz Details Page - Specific Layout Styles
+   (Extracted from the restored Biryani Club Cafe.css)
+   ========================================================================= */
+
+/* --- Layout --- */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 40px 0 60px;
+}
+
+.hero-image-container {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4/3;
+    background: #e0e0e0;
+    /* placeholder bg */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.hero-image-container:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+    pointer-events: none;
+}
+
+.hero-text {
+    padding-right: 20px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(229, 57, 53, 0.1);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.address-short {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.address-short i {
+    color: var(--primary-color);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.status-badge.open {
+    color: #2e7d32;
+    border-left: 4px solid #4caf50;
+}
+
+.status-badge i {
+    font-size: 1.1rem;
+}
+
+/* --- Grid Layout --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* --- Cards --- */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.section-header {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.section-header i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* --- Menu Section --- */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+    transition: var(--transition);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.menu-item:hover {
+    transform: translateX(5px);
+}
+
+.item-info h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.item-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    max-width: 80%;
+}
+
+.item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.size {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* --- About Section --- */
+.about-section p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Timing Section --- */
+.time-table li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.time-table li:last-child {
+    border-bottom: none;
+}
+
+.time-table li.today {
+    font-weight: 700;
+    color: var(--primary-color);
+    background: rgba(229, 57, 53, 0.04);
+    border-radius: var(--radius-sm);
+    border-bottom: none;
+}
+
+/* --- Contact & Map --- */
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.info-block {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.info-block .icon {
+    margin-top: 4px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.info-block h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.info-block p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.map-container {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 992px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image-container {
+        order: -1;
+        /* image on top on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+}
